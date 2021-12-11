@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/appbar"
+
+      android:layout_width="match_parent"
+      android:layout_height="68dp">
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+
+
+      app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+      <TextView
+          android:id="@+id/pomodoroCount"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="26dp"
+          android:fontFamily="@font/dunbar_book"
+          android:text="@string/pomodoroCount"
+          android:textSize="30sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/startButton" />
+
+      <Button
+          android:id="@+id/startButton"
+          android:onClick="on"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="112dp"
+          android:layout_marginTop="354dp"
+          android:layout_marginEnd="10dp"
+          android:text="@string/startPauseButton"
+          app:layout_constraintEnd_toStartOf="@+id/reset"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <Button
+          android:id="@+id/reset"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="354dp"
+          android:layout_marginEnd="113dp"
+          android:onClick="on"
+          android:text="@string/reset"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/startButton"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/completedPomodoros"
+          android:layout_width="355dp"
+          android:layout_height="213dp"
+          android:layout_marginTop="36dp"
+          android:background="#7AA0B2"
+          android:fontFamily="@font/dunbar_book"
+          android:text="@string/pomodoroCompleted"
+          android:textAlignment="center"
+          android:textColor="#001E29"
+          android:textSize="24sp"
+          android:visibility="visible"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/pomodoroCount" />
+
+      <TextView
+          android:id="@+id/fiveMinTimer"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="104dp"
+          android:fontFamily="@font/dunbar_book"
+          android:text="@string/fiveTimer"
+          android:textColor="#001E29"
+          android:textSize="48sp"
+          android:visibility="visible"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/completedPomodoros" />
+
+      <TextView
+          android:id="@+id/twentyTimerText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="193dp"
+          android:textSize="60sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+  <com.google.android.material.appbar.CollapsingToolbarLayout
+      android:id="@+id/collapsingToolbarLayout"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:contentScrim="?attr/colorPrimary"
+      app:layout_anchor="@+id/appbar"
+      app:layout_anchorGravity="center"
+      app:layout_scrollFlags="scroll|exitUntilCollapsed"
+      app:toolbarId="@+id/toolbar">
+  <TextView
+      android:id="@+id/custom_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:fontFamily="@font/dunbar_light"
+      android:text="@string/title"
+      android:textSize="36sp"
+      tools:layout_editor_absoluteX="153dp"
+      tools:layout_editor_absoluteY="25dp" />
+  </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Focus</string>
+    <string name="twentytimer">25:00</string>
+    <string name="timerUpdate">$minutes:$seconds</string>
+    <string name="pomodoroCount">Pomodoro Count: </string>
+    <string name="count">0</string>
+    <string name="Task">Focus</string>
+    <string name="startPauseButton">Start</string>
+    <string name="pomodoroCompleted">You have completed 0 Pomodoros! Time for a break.</string>
+    <string name="fiveTimer">5:00</string>
+    <string name="reset">Reset</string>
+    <string name="title">Focus</string>
+</resources>
